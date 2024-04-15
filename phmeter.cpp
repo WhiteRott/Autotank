@@ -19,7 +19,7 @@ PHMeter::PHMeter(int sensorPin, float calibrationSlope, float calibrationInterce
 
   calibrationSlope = 0.0;      // Default values
   calibrationIntercept = 7.0;  // Default pH value at neutral
-
+  }
 uint16_t PHMeter::getColorForPH(float pH) {
 
   if (pH <= 0) return RED;
@@ -56,7 +56,7 @@ uint16_t PHMeter::blendColor(uint16_t colorA, uint16_t colorB, float ratio) {
 
   return oled->color565(redBlended, greenBlended, blueBlended);
   }
-}
+
 
 void PHMeter::begin() {
   pin = pin;
