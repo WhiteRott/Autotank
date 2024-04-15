@@ -1,0 +1,24 @@
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp: In constructor 'PHMeter::PHMeter(int, float, float, Adafruit_SSD1351&, int, int)':
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp:23:32: error: qualified-id in declaration before '(' token
+ uint16_t PHMeter::getColorForPH(float pH) {
+                                ^
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp:43:29: error: qualified-id in declaration before '(' token
+ uint16_t PHMeter::blendColor(uint16_t colorA, uint16_t colorB, float ratio) {
+                             ^
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp: In member function 'void PHMeter::checkCalibration()':
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp:80:26: error: qualified-id in declaration before '(' token
+ void PHMeter::calibratePH() {
+                          ^
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp:85:30: error: qualified-id in declaration before '(' token
+ void PHMeter::saveCalibration() {
+                              ^
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp:104:30: error: qualified-id in declaration before '(' token
+ void PHMeter::loadCalibration(const char *slopeFile, const char *interceptFile) {
+                              ^
+C:\Users\thene\Docs\Sketch\04092024_timer_buttons_ph_working\phmeter.cpp:130:31: error: qualified-id in declaration before '(' token
+ float PHMeter::loadAndValidate(const char *filename, float minVal, float maxVal, float defaultValue) {
+                               ^
+
+exit status 1
+
+Compilation error: qualified-id in declaration before '(' token
