@@ -19,7 +19,9 @@ PHMeter::PHMeter(int sensorPin, float calibrationSlope, float calibrationInterce
 
   calibrationSlope = 0.0;      // Default values
   calibrationIntercept = 7.0;  // Default pH value at neutral
-  }
+
+
+}
 uint16_t PHMeter::getColorForPH(float pH) {
 
   if (pH <= 0) return RED;
@@ -76,10 +78,9 @@ void PHMeter::checkCalibration() {
   oled->setCursor(0, 0);
   oled->println("Calibrate?");
   oled->println("Yes: +, No: -");
+}
 
 void PHMeter::calibratePH() {
-
-
 }
 
 void PHMeter::saveCalibration() {
@@ -143,8 +144,6 @@ float PHMeter::loadAndValidate(const char *filename, float minVal, float maxVal,
     Serial.println(filename);
   }
   return defaultValue;
-}
-
 
   while (true) {
     if (readButtonState(buttonPlus)) {
@@ -214,8 +213,8 @@ void PHMeter::drawPHScale(float currentPH) {
   }
 
 // Highlight the current pH segment
-int highlightX = 2 * segmentWidth;
-oled->drawRect(highlightX, yStart, segmentWidth, pHScaleHeight, BLACK);
+  int highlightX = 2 * segmentWidth;
+  oled->drawRect(highlightX, yStart, segmentWidth, pHScaleHeight, BLACK);
 }
 
 
